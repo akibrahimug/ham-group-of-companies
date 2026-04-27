@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light only;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-sans);
+    background: #ffffff;
+    color: #000000;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: #000000;
+    color: #ffffff;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+  /* Subtle visual weight for the landing hero title — text-stroke thickens
+   * Instrument Serif strokes without changing the font or its character. */
+  .hero-title {
+    -webkit-text-stroke: 0.018em currentColor;
+    letter-spacing: -0.035em;
+  }
+
+  .hairline {
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+
+  .hairline-strong {
+    border-color: rgba(0, 0, 0, 0.28);
+  }
+
+  .snap-deck {
+    scroll-snap-type: y mandatory;
+  }
+
+  .snap-slide {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .number {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum", "lnum";
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-track {
+  animation: marquee 48s linear infinite;
+  will-change: transform;
+}
+
+@keyframes slowFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: slowFadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Photography keeps its native colour — the B&W treatment now lives in
+ * typography, rules and surfaces. */
+.photo {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tint-dark::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.55) 100%);
+  pointer-events: none;
+}

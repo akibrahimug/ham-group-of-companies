@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "mcp__Sanity__whoami",
+      "mcp__Sanity__list_organizations",
+      "WebFetch(domain:hamzgroup.com)",
+      "mcp__Sanity__create_project",
+      "mcp__Sanity__deploy_schema",
+      "Bash(npm install *)",
+      "mcp__Sanity__create_documents_from_json",
+      "mcp__Sanity__publish_documents",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl -s http://localhost:3000/pitch)",
+      "Bash(curl -s -o /dev/null -w \"home=%{http_code} pitch=%{http_code}\\\\n\" http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"pitch=%{http_code}\\\\n\" http://localhost:3000/pitch)",
+      "Bash(pkill -f \"next dev\")",
+      "mcp__Sanity__patch_document_from_json",
+      "Bash(curl -s -I http://localhost:3000/images/hero-stadium.jpg)",
+      "Bash(curl -s -I http://localhost:3000/images/leader-hamis.png)",
+      "Bash(curl -s -I http://localhost:3000/images/byaallah-mall.jpg)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(pkill -9 -f \"next dev\")",
+      "Bash(pkill -9 -f \"next-server\")",
+      "Bash(sort -u pkill -9 -f \"next dev\" echo \"stopped\")",
+      "Bash(curl -s http://localhost:3000/audit)",
+      "Bash(curl -s http://localhost:3000/pitch/pdf)",
+      "Bash(curl -s http://localhost:3000/companies)"
+    ]
+  }
+}
