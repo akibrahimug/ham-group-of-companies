@@ -7,7 +7,7 @@ A unique, minimalist web presence and pitch deck for the Ham Group of Companies 
 - **Framework:** Next.js 15 (App Router)
 - **Language:** TypeScript
 - **Styling:** TailwindCSS 3
-- **CMS:** Sanity (project `2nwnchxj`, dataset `production`)
+- **CMS:** Sanity
 - **Motion:** Framer Motion
 
 ## Routes
